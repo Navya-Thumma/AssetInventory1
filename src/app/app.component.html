@@ -1,8 +1,8 @@
 <!--<label >Hii</label>-->
 
 <mat-toolbar class="col-bg-header">
-  <div class="logo">
-    EquipMax. <span class="apptype">Software Management</span>
+  <div class="logo" routerLink="/start1">
+    EquipMax. <span class="apptype">Inventory Management</span>
   </div>
 </mat-toolbar>
 
@@ -43,12 +43,20 @@
       <mat-option  *ngFor="let food of foods" [value]="food.value">{{food.viewValue}}</mat-option>
   </mat-autocomplete> -->
   
-  <div id="hd" class="row">
+ <!--<div id="hd" class="row">
     <div class="hdDisp">
-      <b id="movName" routerLink="/start" > Dashboard</b>
+      <b id="movName" routerLink="/start1" > Items</b>-->
      <!-- <button mat-button class="stylepopupbuttonconfirm" routerLink="/start">Dashboard</button>-->
-    </div> 
+  <!--  </div> 
   </div>
+  <h1 class="settitle">
+    {{title}}
+  </h1>-->
+  
+ <!-- <ngx-barcode [bc-value]="234" [bc-display-value]="true"> 
+
+  </ngx-barcode>-->
+
   <router-outlet></router-outlet>
 </div> 
 <!--  

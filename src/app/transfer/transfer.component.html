@@ -5,8 +5,60 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-<div class="container" style="padding: 25px;">
-    <form>
+<!--<div class="container" style="padding: 25px;">-->
+  <div id="aa">
+    <div id="hd" class="row">
+      <div class="hdDisp">
+        <b id="movName" routerLink="/start1" > HpLaptop</b>
+       </div> 
+    </div>
+    
+    <mat-tab-group>
+        <mat-tab label="Transfer">  </mat-tab>
+      </mat-tab-group>    
+    
+      <div class="container" >
+          <br>
+          <br>
+          <div class="row">          
+          <div class="col-sm-4">
+          <img class="img-responsive"  src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+          </div>
+          <div class="col-sm-7">
+            <form>
+              <div class="form-group">
+                <label for="comment">Select Location</label><br>
+                <select >
+                    <option>Select</option>
+                    <option>Hyderabad</option>
+                    <option>Mumbai</option>
+                    <option>Bangalore</option>
+                    <option>Delhi</option>
+                  </select>
+              </div>
+              <!--<div class="form-group">
+                <label for="usr">Enter To location</label>
+                <input type="text" class="form-control" id="usr">
+              </div>-->
+              <div class="form-group">
+                <label for="comment">Enter Qunatity</label><br>
+                <select >
+                    <option>Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+              <button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>
+            <br><br>
+            </form>
+          </div></div></div>
+          </div>
+        </body>
+    <!-- <form>
         <div class="form-group">
           <label for="usr">Enter To location</label>
           <input type="text" class="form-control" id="usr">
@@ -28,20 +80,9 @@
             <textarea class="form-control" rows="5" id="comment"></textarea>
           </div>
          
-        </form>
-<!--<br><br>
-Enter Item
-<input type="text">
-<br><br>
-Enter Quantity
-<input type="text">
-<br><br>
-Enter Comments
-<input type="textarea">
-<br><br>-->
-
-<!--<button class="btn btn-primary" routerLink="/receipt">Submit</button><br>-->
-<button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Submit</button>
-
-</div>
-  </body>
+        </div>
+          </div>
+        
+<button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>
+      
+    </form>-->
