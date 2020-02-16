@@ -21,7 +21,13 @@
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
         <td mat-cell *matCellDef="let element"> 
-            <b routerLink="/details" > {{element.name}} </b>
+          <b [routerLink]="['/details' , element.name]" > {{element.name}} </b>
+            <!--<b routerLink="/details" > {{element.name}} </b>-->
+           <!-- <div ngSwitch="{{element.name}}">
+              <div *ngSwitchCase="'laptop-Electronics'"><b routerLink="/details" > {{element.name}} </b></div>
+              <div *ngSwitchCase="'Chair-Furniture'"><b routerLink="/clone" > {{element.name}} </b></div>
+              <div *ngSwitchDefault>no</div>
+            </div>-->
             
         </td>
       </ng-container>
@@ -33,16 +39,18 @@
       </ng-container>
   
       
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Transfer </th>
-        <td mat-cell *matCellDef="let element">
-          <b routerLink="/transfer" > 
-          <div class="checkbox">
-            <label><input type="checkbox" value="">transfer</label>
-          </div>
-          </b>     
-        </td>
-      </ng-container>
+ <!--     <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> 
+          <button mat-button class="stylepopupbuttonconfirm"  routerLink="/transfer">Transfer</button>  
+        </th>
+        <td mat-cell *matCellDef="let element">-->
+         <!--<b routerLink="/transfer" >--> 
+         <!--<div class="checkbox">
+            <label><input type="checkbox" value=""></label>
+          </div>-->
+         <!-- </b>-->     
+        <!--</td>
+      </ng-container>-->
       <ng-container matColumnDef="indicator">
         <th mat-header-cell *matHeaderCellDef> Indicator </th>
         <td mat-cell *matCellDef="let element">
@@ -64,7 +72,18 @@
          <!-- {{element.indicator}}-->
            </td>
       </ng-container>
-  
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> 
+          <button mat-button class="stylepopupbuttonconfirm"  routerLink="/transfer">Transfer</button>  
+        </th>
+        <td mat-cell *matCellDef="let element">
+         <!--<b routerLink="/transfer" >--> 
+          <div class="checkbox">
+            <label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox" value=""></label>
+          </div>
+         <!-- </b>-->     
+        </td>
+      </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

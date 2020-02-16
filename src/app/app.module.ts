@@ -74,7 +74,7 @@ const appRoutes: Routes = [
   {path: 'start1', component: Start1Component},
   {path: 'receipt', component: ReceiptComponent},
   {path: 'item', component: ItemComponent},
-  {path: 'details', component: DetailsComponent},
+  {path: 'details/:name', component: DetailsComponent},
 ];
 @NgModule({
   declarations: [

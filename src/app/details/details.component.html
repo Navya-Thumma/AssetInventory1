@@ -6,80 +6,606 @@
 <body>
   <div id="aa">
 <div id="hd" class="row">
-  <!--<div class="hdDisp">-->
-    <b id="movName" routerLink="/start1" style="margin-left: 4cm;"> HpLaptop</b>
-   <!-- <button mat-button class="stylepopupbuttonconfirm" routerLink="/start">Dashboard</button>-->
-  <!--</div> -->
+    <b id="movName" routerLink="/start1" style="margin-left: 4cm;"> {{dep}} </b>
 </div>
-
 <mat-tab-group>
     <mat-tab label="Details">  </mat-tab>
-    <!--<mat-tab label="Files"> Content 2 </mat-tab>-->
-    
   </mat-tab-group>
-  
-     
-    <div class="container" >
-      <br>
-      <br>
-
-     <!--<img class="img-responsive" src="assets/images/myimage.png">-->
-      <img class="img-responsive" src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
-    </div>
-    <br><br>
-   <!-- <b style="color: brown;">DETAILS:</b>-->
-    <!--<mat-list>
-      <mat-list-item><b>Quantity:</b>2</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item><b>Department</b><br><br>Main Office<br></mat-list-item> 
-      <mat-divider></mat-divider>
-      <mat-list-item><b>Depreciation rate</b><br><br>2.5<br></mat-list-item>
-      <mat-divider></mat-divider>
-      
-    </mat-list>-->
-    <div class="row">
-     <div class="col-sm-6" style="margin-left: 1cm;">
-    <mat-list>
-      <b><h2 mat-subheader><b>Details</b></h2></b>
-      <mat-list-item >
-        <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
-        <p mat-line>  2</p>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item >
-        <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
-        <p mat-line>  Main Office</p>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item >
-        <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
-        <p mat-line>  2.5</p>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-     
-    </mat-list>
-    <br>
-    <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
-     </div>
-     <div class="col-sm-3">
-       <br>
-                       <h3>   Barcode:</h3><br><br>
-      <mat-list>
-        
-        <mat-list-item> 
-          <ngx-barcode [bc-value]="10012" [bc-display-value]="true">
-
-          </ngx-barcode> </mat-list-item>
-        
+  <div ngSwitch="{{dep}}">
+    <div *ngSwitchCase="'laptop-Electronics'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
        </mat-list>
-     
-     </div>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10012" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>
+   
     </div>
-    <!--<h1>
-      {{title}}
-    </h1>
-    <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>-->
   
+    <div *ngSwitchCase="'Chair-Furniture'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/chair.jpeg" class="img-thumbnail" alt="Cinque Terre" width="400" height="100"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Branch_1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1.33</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10013" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Watch-Accessories'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/watch.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Branch_3</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  4.2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10014" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Sofa-Furniture'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/sofa.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10015" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Phone-Electronics'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/phone.jpeg" class="img-thumbnail" alt="Cinque Terre" width="300" height="100"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line> Branch_1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1.2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10016" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Jacket-Clothing'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/jacket.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10017" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Iron-Appliancies'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/iron.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10018" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'TV-Appliances'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/tv.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  4</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10019" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Table-Furniture'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/table.jpeg" class="img-thumbnail" alt="Cinque Terre" width="300" height="100"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10020" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'PowerBank-Electronics'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/powerbank.jpeg" class="img-thumbnail" alt="Cinque Terre" width="350" height="100"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line> Branch_2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2.2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10021" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Bed-Furniture'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/bed.jpeg" class="img-thumbnail" alt="Cinque Terre" width="400" height="100"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  4</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Branch_1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  3.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10022" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'iPod-Electronics'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/iPod.jpeg" class="img-thumbnail" alt="Cinque Terre" width="250" height="50"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Main Office</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  0.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10023" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Shoes-Sportswear'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/shoes.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Branch_2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  4.5</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10024" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    <div *ngSwitchCase="'Bracelet-Accessories'">
+      <div class="container" >
+        <br>
+        <br>
+        <img class="img-responsive" src="assets/bracelet.jpeg" class="img-thumbnail" alt="Cinque Terre" width="400" height="120"> 
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6" style="margin-left: 1cm;">
+       <mat-list>
+         <b><h2 mat-subheader><b>Details:</b></h2></b>
+         <mat-list-item >
+           <h4 mat-line>Quantity</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  2</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Department</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  Branch_3</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item >
+           <h4 mat-line>Depreciation rate</h4><br><h3 mat-line><br></h3>
+           <p mat-line>  1.45</p>
+         </mat-list-item>
+         <mat-divider></mat-divider>  
+       </mat-list>
+       <br>
+       <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone1">clone</button>
+        </div>
+        <div class="col-sm-3">
+          <br>
+                          <h3>   Barcode:</h3><br><br>
+         <mat-list>
+           
+           <mat-list-item> 
+             <ngx-barcode [bc-value]="10025" [bc-display-value]="true">
+             </ngx-barcode> </mat-list-item>    
+          </mat-list>
+        </div>
+       </div>  
+    </div>
+    
+  
+    <div *ngSwitchDefault>no</div>
   </div>
-<!--<mat-card>Simple card</mat-card>-->
+        
+  </div>
 </body>

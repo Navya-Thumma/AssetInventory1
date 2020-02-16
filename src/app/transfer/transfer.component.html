@@ -3,8 +3,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="">
 <!--<div class="container" style="padding: 25px;">-->
   <div id="aa">
     <div id="hd" class="row">
@@ -14,35 +15,55 @@
     </div>
     
     <mat-tab-group>
-        <mat-tab label="Transfer">  </mat-tab>
+        <mat-tab label="Transfer- currentLocation : Hyderabad">  </mat-tab>
       </mat-tab-group>    
     
       <div class="container" >
           <br>
           <br>
           <div class="row">          
-          <div class="col-sm-4">
-          <img class="img-responsive"  src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+          <div class="col-sm-0">
+          <!--<img class="img-responsive"  src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
+          -->
           </div>
-          <div class="col-sm-7">
+          <div class="col-sm-10">
             <form>
-              <div class="form-group">
-                <label for="comment">Select Location</label><br>
-                <select >
-                    <option>Select</option>
-                    <option>Hyderabad</option>
-                    <option>Mumbai</option>
-                    <option>Bangalore</option>
-                    <option>Delhi</option>
+             <!-- <div class="form-group">
+
+             <label for="comment">Select Location</label><br>
+             <select ng-model="myVar">
+              <option value="">Select
+              <option value="hyd">Hyderabad
+              <option value="mum">Mumbai
+              <option value="bng">Bangalore
+            </select>-->
+            <!--    <select id="gg" >
+                    <option value="1">
+                      <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone">Send Request</button>
+                    </option>
+                    <option value="2">Hyderabad</option>
+                    <option value="3">Mumbai</option>
+                    <option value="4">Bangalore</option>
+                    <option value="5">Delhi</option>
                   </select>
-              </div>
+                  <script>
+                    var e=document.getElementById("gg");
+                    var s=e.options[e.selectedIndex].value;
+                    if(s==2)
+                    valid=true;
+                    else
+                    valid=true;
+                    document.getElementById("demo").innerHTML =
+"The total is: " + total;
+                  </script>-->
+              <!--</div>-->
               <!--<div class="form-group">
                 <label for="usr">Enter To location</label>
                 <input type="text" class="form-control" id="usr">
               </div>-->
               <div class="form-group">
                 <label for="comment">Enter Qunatity</label><br>
-                <select >
+                <select  >
                     <option>Select</option>
                     <option>1</option>
                     <option>2</option>
@@ -52,8 +73,46 @@
                 <label for="comment">Comments:</label>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
               </div>
-              <button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>
-            <br><br>
+              <!--<div ng-switch="myVar">
+                <div ng-switch-when="hyd">
+                  <div  routerLink="/receipt"></div>
+  
+                </div>
+                <div ng-switch-when="mum">
+                  <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone">Send Request</button>
+ 
+                </div>
+                <div ng-switch-when="bng">
+                  <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone">Send Request</button>
+ 
+                </div>
+              </div>
+              <button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>-->
+            <!-- <div ngSwitch="myVar.value">
+                <div *ngSwitchCase="hyd">hii</div>
+                <div *ngSwitchCase="mum">hiii1</div>
+               
+                <div *ngSwitchDefault>no</div>
+              </div>-->
+             <!--<script>var k="/receipt";</script>-->
+             
+              <!-- <div *ngIf="valid; else temp">
+                  <button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>
+               </div>
+               <ng-template #temp>
+                  <button mat-button class="stylepopupbuttonconfirm"  routerLink="/clone">Send Request</button>
+               </ng-template>
+              -->
+             <!-- <button mat-button class="stylepopupbuttonconfirm"  routerLink="/receipt">Send Request</button>
+             -->
+              <br>
+              <div class="form-group">
+                <label for="comment">Select Location:</label><br>
+              <button type="button" class="btn btn-default" routerLink="/receipt">Hyderabad</button>&nbsp;
+              <button type="button" class="btn btn-default" routerLink="/item">Mumbai</button>&nbsp;
+              <button type="button" class="btn btn-default" routerLink="/item">Banglore</button>&nbsp;
+              <button type="button" class="btn btn-default" routerLink="/item">Chennai</button>&nbsp;
+              </div>
             </form>
           </div></div></div>
           </div>
