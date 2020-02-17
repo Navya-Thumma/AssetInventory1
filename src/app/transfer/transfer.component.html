@@ -4,10 +4,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      // Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});
+    </script>
+   <!--<style>
+      body {
+        background-color:hsl(0, 0%, 62%);
+      }
+      </style>-->
   </head>
-  <body ng-app="">
+  <body ng-app="" >
 <!--<div class="container" style="padding: 25px;">-->
-  <div id="aa">
+  <div class="panel panel-default">
+    <div class="panel-body">
+  <div >
     <div id="hd" class="row">
       <div class="hdDisp">
         <b id="movName" routerLink="/start1" > HpLaptop</b>
@@ -22,11 +35,12 @@
           <br>
           <br>
           <div class="row">          
-          <div class="col-sm-0">
+         <!--<div class="col-sm-0">-->
           <!--<img class="img-responsive"  src="assets/lap1.jpeg" class="img-thumbnail" alt="Cinque Terre" width="500" height="200"> 
           -->
-          </div>
+          <!--</div>-->
           <div class="col-sm-10">
+            
             <form>
              <!-- <div class="form-group">
 
@@ -63,12 +77,19 @@
               </div>-->
               <div class="form-group">
                 <label for="comment">Enter Qunatity</label><br>
-                <select  >
+                <select class="form-control" id="comment" >
                     <option>Select</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
               </div>
+              <!--<select class="mdb-select md-form">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>-->
+
               <div class="form-group">
                 <label for="comment">Comments:</label>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
@@ -115,7 +136,7 @@
               </div>
             </form>
           </div></div></div>
-          </div>
+          </div> </div> </div>
         </body>
     <!-- <form>
         <div class="form-group">
